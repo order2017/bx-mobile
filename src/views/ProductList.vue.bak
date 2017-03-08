@@ -1,0 +1,216 @@
+<template>
+    <div id="product-list">
+        <div class="product-list-category">
+            <a href="" class="active">
+                <div class="product-list-category-btn">全部</div>
+            </a>
+            <span class="line"></span>
+            <a href="#">
+                <div class="product-list-category-btn">健康</div>
+            </a>
+            <a href="#">
+                <div class="product-list-category-btn">意外</div>
+            </a>
+            <a href="#">
+                <div class="product-list-category-btn">财产</div>
+            </a>
+            <a href="#">
+                <div class="product-list-category-btn">老人</div>
+            </a>
+            <a href="#">
+                <div class="product-list-category-btn">旅游</div>
+            </a>
+            <a href="#">
+                <div class="product-list-category-btn">财产</div>
+            </a>
+        </div>
+        <div class="product-list">
+            <router-link to="/product/allianz" class="product-list-line">
+                <div class="product-list-image">
+                    <img src="../assets/images/product-thumb.jpg" alt="">
+                </div>
+                <div class="product-list-info">
+                    <div class="product-list-title">航空意外伤害险</div>
+                    <div class="product-list-tips">飞行达人必备，最高保额阿撒旦法撒旦法大法师的阿迪发动发动法师打发点首发得分俺的沙发垫付</div>
+                    <div class="product-list-company">永安保险</div>
+                    <div class="product-list-block">
+                        <div class="product-list-price">100</div>
+                        <div class="product-list-sale-number">销量10000份</div>
+                    </div>
+
+                </div>
+            </router-link>
+            <router-link to="/product/123" class="product-list-line">
+                <div class="product-list-image">
+                    <img src="../assets/images/product-thumb.jpg" alt="">
+                </div>
+                <div class="product-list-info">
+                    <div class="product-list-title">航空意外伤害险</div>
+                    <div class="product-list-tips">飞行达人必备，最高保额阿撒旦法撒旦法大法师的阿迪发动发动法师打发点首发得分俺的沙发垫付</div>
+                    <div class="product-list-company">永安保险</div>
+                    <div class="product-list-block">
+                        <div class="product-list-price">100</div>
+                        <div class="product-list-sale-number">销量10000份</div>
+                    </div>
+
+                </div>
+            </router-link>
+        </div>
+        <main-menu></main-menu>
+    </div>
+</template>
+<style lang="scss">
+
+    .product-list-category {
+        display: block;
+        font-size: 0;
+        height: 90px;
+        line-height: 90px;
+        border-bottom: 1px solid #dcdcdc;
+        background: #ffffff;
+        overflow: hidden;
+    }
+
+    .product-list-category > a {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 30px;
+        height: 90px;
+        line-height: 90px;
+        text-decoration: none;
+        color: #000000;
+        vertical-align: middle;
+    }
+
+    .product-list-category > a.active {
+        color: #0084ca;
+    }
+
+    .product-list-category .line {
+        height: 60px;
+        display: inline-block;
+        width: 1px;
+        border-right: 1px solid #a0a0a0;
+        vertical-align: middle;
+    }
+
+    .product-list-category-btn {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 87px;
+    }
+
+    .product-list-category > a.active .product-list-category-btn {
+        border-bottom: 4px solid #0084ca;
+    }
+
+    .product-list {
+        background: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .product-list-line {
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        text-decoration: none;
+        display: block;
+        padding: 25px 20px;
+        overflow: hidden;
+    }
+
+    .product-list-line + .product-list-line {
+        border-top: none;
+    }
+
+    .product-list-image {
+        float: left;
+        width: 236px;
+        height: 236px;
+        text-align: center;
+    }
+
+    .product-list-image img {
+        width: 236px;
+        height: 236px;
+    }
+
+    .product-list-info {
+        width: 445px;
+        margin-left: 25px;
+        float: left;
+    }
+
+    .product-list-title {
+        height: 42px;
+        line-height: 42px;
+        font-size: 30px;
+        overflow: hidden;
+        color: #000000;
+    }
+
+    .product-list-tips {
+        color: #808080;
+        font-size: 24px;
+        width: 350px;
+        line-height: 32px;
+        height: 64px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .product-list-company {
+        color: #ff6000;
+        font-size: 24px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 30px;
+        height: 30px;
+        float: left;
+        border: 1px solid #ff6000;
+        border-radius: 4px;
+    }
+
+    .product-list-block {
+        clear: both;
+        overflow: hidden;
+        padding-top: 15px;
+    }
+
+    .product-list-price {
+        font-size: 40px;
+        line-height: 42px;
+        height: 42px;
+        float: left;
+        color: #ff0000;
+    }
+
+    .product-list-price:before {
+        content: "￥";
+        font-size: 25px;
+    }
+
+    .product-list-sale-number {
+        float: right;
+        font-size: 24px;
+        line-height: 26px;
+        height: 26px;
+        margin-top: 15px;
+        color: #808080;
+    }
+</style>
+<script>
+import MainMenu from '../components/MainMenu.vue'
+  export default{
+    data () {
+      return {
+      }
+    },
+    components:{
+         'main-menu':MainMenu,
+     }
+  }
+
+</script>
